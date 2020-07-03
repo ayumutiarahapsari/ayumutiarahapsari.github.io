@@ -1,0 +1,20 @@
+.board {
+    text-align: center;
+}
+li {
+    float: left;
+  }
+.eiffel, .greatwall, .liberty, .pisa, .pyramid {
+    transition: .3s;
+    position: relative;
+    top:0;
+    cursor: pointer;
+}
+
+.eiffel:hover, .greatwall:hover, .liberty:hover, .pisa:hover, .pyramid:hover, .active {
+    box-shadow: 0 0 10px 5px limegreen;
+}
+
+.eiffel:active, .greatwall:active, .liberty:active, .pisa:active, .pyramid:active {
+    top: 2px;
+}
