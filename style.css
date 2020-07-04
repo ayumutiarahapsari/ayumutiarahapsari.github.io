@@ -18,3 +18,9 @@ li {
 .eiffel:active, .greatwall:active, .liberty:active, .pisa:active, .pyramid:active {
     top: 2px;
 }
+.info {
+    text-align: center;
+    font-size: 1cm;
+    left: 15cm;
+    top: 30cm;
+}
