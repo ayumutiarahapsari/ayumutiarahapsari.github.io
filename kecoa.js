@@ -22,25 +22,32 @@ function getPilihanComputer(){
 
 function getHasil(comp, player){
    
-    if (player === comp) return 'MENANG!';
-    else return 'KALAH...';
+    if (player === comp) {
+        return 'MENANG!'
+    }
+    else if (player !== comp) {
+        return 'KALAH...' 
+    };
 }
 
-const pilihan = document.querySelectorAll('img');
 
-console.log(pilihan);
-pilihan.forEach(function(pil) {
-    pil.addEventListener('click', function() {
+
+var pilihan = document.getElementsByTagName('img');
+var imgkecoa = document.getElementById('kecoa');
+
+for (i = 1; i < pilihan.length; i++){
+    //console.log(pilihan[i]);
+    pilihan[i].addEventListener('click', function(){
+        
         const pilihanComputer = getPilihanComputer();
-        const pilihanPlayer = pil.className;
-        const hasil = gethasil(pilihanComputer, pilihanPlayer);
-        // var kecoaimg = document.getElementById("kecoa").src = "./kecoa.png";
-        document.getElementById("kecoa").setAttribute('src', "./kecoa.png");
-        console.log('test')
+        const pilihanPlayer = pilihan.className;
+        const hasil = getHasil(pilihanComputer, pilihanPlayer);
 
-
-
+        document.getElementById(pilihanComputer).setAttribute('src', "./kecoa.png");
+        const info = document.querySelector('.info');
+        info.innerHTML = hasil;
     })
-    
 }
-)
+
+
+
